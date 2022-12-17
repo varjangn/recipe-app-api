@@ -18,4 +18,4 @@ class RecipeDetailSerializer(RecipeSerializer):
     """Serializer for single recipe instance"""
 
     class Meta(RecipeSerializer.Meta):
-        fields = RecipeSerializer.Meta.fields = ['description']
+        fields = RecipeSerializer.Meta.fields + ['description']
