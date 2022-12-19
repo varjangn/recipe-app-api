@@ -59,7 +59,10 @@ class PrivateRecipeAPITests(TestCase):
 
     def setUp(self):
         self.client = APIClient()
-        self.user = create_user(email='test@example.com', password='testpass123')
+        self.user = create_user(
+            email='test@example.com',
+            password='testpass123'
+        )
         self.client.force_authenticate(self.user)
 
     def test_retrive_recipes(self):
@@ -162,7 +165,10 @@ class PrivateRecipeAPITests(TestCase):
 
     def test_update_user_returns_error(self):
         """Test updating user returns error"""
-        new_user = create_user(email='user2@example.com', password='testpass123')
+        new_user = create_user(
+            email='user2@example.com',
+            password='testpass123'
+        )
         recipe = create_recipe(user=self.user)
 
         payload = {'user': new_user.id}
