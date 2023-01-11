@@ -20,7 +20,7 @@ services:
       - DB_HOST=db
       - DB_NAME=devdb
       - DB_USER=devuser
-      - DB_PASSWORD=admin123
+      - DB_PASS=admin123
       - DEBUG=1
     depends_on:
       - db
